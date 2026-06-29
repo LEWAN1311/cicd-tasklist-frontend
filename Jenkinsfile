@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        nodejs 'node22'
+        dockerTool 'docker cli'
+    }
     environment {
         DOCKER_IMAGE = 'lewan1311/tasklist-frontend'
         DOCKER_TAG   = "${BUILD_NUMBER}"
